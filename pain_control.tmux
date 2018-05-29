@@ -46,15 +46,10 @@ pane_split_bindings() {
 	tmux bind-key '"' split-window -v
 }
 
-improve_new_window_binding() {
-	tmux bind-key "c" new-window -c "#{pane_current_path}"
-}
-
 main() {
 	pane_navigation_bindings
 	window_move_bindings
 	pane_resizing_bindings
 	pane_split_bindings
-	improve_new_window_binding
 }
 main
